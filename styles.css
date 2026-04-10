@@ -1549,10 +1549,10 @@ h2 {
   }
 
   .service-tabs {
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    padding-bottom: 0.2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-x: visible;
+    padding-bottom: 0;
   }
 
   .service-tab {
