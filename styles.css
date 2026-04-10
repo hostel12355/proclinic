@@ -1682,6 +1682,29 @@ h2 {
   grid-template-columns: 0.9fr 1.1fr;
 }
 
+.page-grid > .page-content {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.page-grid > .sidebar-stack {
+  display: contents;
+}
+
+.page-grid > .sidebar-stack .page-media {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: start;
+}
+
+.page-grid > .sidebar-stack .sidebar-card {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  width: 100%;
+  max-width: min(760px, 100%);
+  justify-self: center;
+}
+
 .page-content h2 {
   margin-bottom: 0.7rem;
 }
@@ -1744,6 +1767,14 @@ h2 {
   color: #446257;
   line-height: 1.66;
   font-size: 0.88rem;
+}
+
+.sidebar-card p {
+  margin: 0.45rem 0;
+}
+
+.sidebar-card p:last-child {
+  margin-bottom: 0;
 }
 
 .sidebar-card ul {
@@ -1893,6 +1924,20 @@ h2 {
   .page-grid.reverse,
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+
+  .page-grid > .sidebar-stack {
+    display: grid;
+    gap: 0.7rem;
+  }
+
+  .page-grid > .sidebar-stack .page-media,
+  .page-grid > .sidebar-stack .sidebar-card,
+  .page-grid > .page-content {
+    grid-column: auto;
+    grid-row: auto;
+    justify-self: stretch;
+    max-width: 100%;
   }
 
   .condition-grid,
